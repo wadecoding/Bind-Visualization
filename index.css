@@ -1,0 +1,116 @@
+body {
+  font-size: 12px;
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+.container::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.keyboard-container {
+  margin-bottom: 20px;
+}
+.keyboard-container::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.has-bound {
+  background-color: #b9ff9a;
+}
+.gap-02 {
+  margin-right: 10px;
+}
+.gap-12 {
+  margin-right: 60px;
+}
+.gap {
+  margin-right: 50px;
+}
+.gap-05 {
+  margin-right: 25px;
+}
+.gap-02 {
+  margin-right: 10px;
+}
+.gap-34 {
+  margin-right: 170px;
+}
+.row {
+  float: left;
+  position: relative;
+}
+div.row::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.key {
+  box-sizing: border-box;
+  float: left;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.key.u-125 {
+  width: 62.5px;
+}
+.key.u-15 {
+  width: 75px;
+}
+.key.u-175 {
+  width: 87.5px;
+}
+.key.u-2 {
+  width: 100px;
+}
+.key.u-225 {
+  width: 112.5px;
+}
+.key.u-275 {
+  width: 137.5px;
+}
+.key.u-625 {
+  width: 312.5px;
+}
+.key.kp {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+}
+.key.keypad {
+  flex-direction: column;
+  justify-items: flex-end;
+}
+#btn {
+  display: block;
+  border: none;
+  padding: 7px 15px;
+  font-size: 16px;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 5px;
+}
+.parse-bind {
+  float: left;
+}
+.bind-float {
+  float: left;
+  margin-left: 20px;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}

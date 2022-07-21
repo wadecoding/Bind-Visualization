@@ -1,0 +1,159 @@
+@base-size: 50px;
+@u-1: @base-size * 1;
+@u-125: @base-size * 1.25;
+@u-15: @base-size * 1.5;
+@u-175: @base-size * 1.75;
+@u-2: @base-size * 2;
+@u-225: @base-size * 2.25;
+@u-275: @base-size * 2.75;
+@u-625: @base-size * 6.25;
+@gap: @base-size;
+@gap-05: @gap * 0.5;
+@gap-02: @base-size * 0.2;
+@gap-12: @gap * 1.2;
+@gap-34: @gap * 3 + @gap-02 * 2;
+
+body {
+  font-size: 12px;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+//bind visualization
+.keyboard-container {
+  margin-bottom: 20px;
+}
+
+.keyboard-container::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.has-bound {
+  background-color: #b9ff9a;
+}
+
+.gap-02 {
+  margin-right: @gap-02;
+}
+
+.gap-12 {
+  margin-right: @gap-12;
+}
+
+.gap {
+  margin-right: @gap;
+}
+
+.gap-05 {
+  margin-right: @base-size * 0.5;
+}
+
+.gap-02 {
+  margin-right: @base-size * 0.2;
+}
+
+.gap-34 {
+  margin-right: @base-size * 3 + (@base-size*0.2) * 2;
+}
+
+.row {
+  float: left;
+  position: relative;
+}
+
+div.row::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.key {
+  box-sizing: border-box;
+  float: left;
+  height: @base-size;
+  width: @base-size;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  &.u-125 {
+    width: @u-125;
+  }
+
+  &.u-15 {
+    width: @u-15;
+  }
+
+  &.u-175 {
+    width: @u-175;
+  }
+
+  &.u-2 {
+    width: @u-2;
+  }
+
+  &.u-225 {
+    width: @u-225;
+  }
+
+  &.u-275 {
+    width: @u-275;
+  }
+
+  &.u-625 {
+    width: @u-625;
+  }
+
+  &.kp {
+    width: @base-size;
+    height: @base-size * 2;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.key.keypad {
+  flex-direction: column;
+  justify-items: flex-end;
+}
+
+//输入相关
+#btn {
+  display: block;
+  border: none;
+  padding: 7px 15px;
+  font-size: 16px;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.parse-bind {
+  float: left;
+}
+
+.bind-float {
+  float: left;
+  margin-left: 20px;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
